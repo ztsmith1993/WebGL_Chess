@@ -41,7 +41,7 @@ objLoader.load("/assets/models/" + pieceInfo[2].name + ".obj", function(object) 
             child.rotation.x = 1.6;
             child.rotation.y = 1.7;
             scene.add(child);
-            animatePawn(pawn);
+            animateKnight(knight);
         }
     });
 });
