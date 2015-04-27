@@ -38,7 +38,7 @@ objLoader.load("/assets/models/" + pieceInfo[2].name + ".obj", function(object) 
     object.traverse( function ( child ) {
 
         if (child instanceof THREE.Mesh) {
-            pawn = child;
+            knight = child;
             child.material = new THREE.MeshLambertMaterial({color: 0x555555});
             child.position.set(.25,-1.2,.4);
             child.scale.set(.025, .025, .025);
