@@ -28,6 +28,11 @@ var pieces = [];
 //loadPieces(pieceInfo);
 
 var pawn;
+var rook;
+var knight;
+var bishop;
+var queen;
+var king;
 
 objLoader.load("/assets/models/" + pieceInfo[2].name + ".obj", function(object) {
     object.traverse( function ( child ) {
