@@ -1,6 +1,4 @@
-/**
- * Created by justinmiller on 4/2/15.
- */
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -31,7 +29,7 @@ var pieces = [];
 
 var pawn;
 
-objLoader.load("/assets/models/" + pieceInfo[0].name + ".obj", function(object) {
+objLoader.load("/assets/models/" + pieceInfo[2].name + ".obj", function(object) {
     object.traverse( function ( child ) {
 
         if (child instanceof THREE.Mesh) {
@@ -163,10 +161,10 @@ var TweenSpacesDiagonal = function(piece, spacesX, spacesY) {
     return tween;
 };
 
-function animatePawn(pawn) {
-    var tweenUp = TweenUp(pawn);
-    var tweenOneUp = TweenSpacesDiagonal(pawn, 3, 3);
-    var tweenDown = TweenDown(pawn);
+function animateKnight(knight) {
+    var tweenUp = TweenUp(knight);
+    var tweenOneUp = TweenSpacesDiagonal(knight, 3, 3);
+    var tweenDown = TweenDown(knight);
     tweenUp.chain(tweenOneUp);
     tweenOneUp.chain(tweenDown);
     tweenUp.start();
